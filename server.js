@@ -12,7 +12,7 @@ const indexrout=require("./routes/indexrout");
 
 const mongoose=require("mongoose");
 
-mongoose.connect("mongodb://localhost/labrary",{
+mongoose.connect(process.env.DATABASE_URL,{
     useNewUrlParser:true
 });
 const db=mongoose.connection
